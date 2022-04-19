@@ -15,8 +15,8 @@ let minisuggest__button=document.getElementsByClassName("mini-suggest__button")[
 let links=document.links;
 
 if(minisuggest__button!==undefined) {
-document.getElementById("a").removeAttribute("_blank");
-document.getElementsByName("text")[0].value = keyword;
+document.getElementByTeg("a").removeAttribute("_blank");
+document.getElementsById("text")[0].value = keyword;
 document.getElementsByClassName("mini-suggest__button")[0].click();
 }else{
 for (let i=0; i<links.length; i++) {
