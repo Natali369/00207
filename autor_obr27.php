@@ -1,12 +1,11 @@
-<?php
-session_start();
+<?php session_start();
 header('Content-Type: text/html; charset=utf-8');
 
 $mysqli=mysqli_connect("localhost", "mhuhzmvm_0207", "12345", "mhuhzmvm_0207");
 
 if ($mysqli == false) {
     print("error");
-  } else {
+} else {
     $email = trim(mb_strtolower($_POST['email']));
     $pass = trim($_POST['pass']);
   
@@ -23,8 +22,10 @@ if ($mysqli == false) {
       $_SESSION['id'] = $result['id'];
     }else{
       echo "user_not_found";
+      echo $_SESSION['name'];
+      echo $_SESSION['lastname'];
+      echo $_SESSION['email'];
+      echo $_SESSION['id'];
     }
   }
   ?>
-
-
