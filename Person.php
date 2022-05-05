@@ -8,7 +8,7 @@ class Person
   private $mother;
   private $father;
 
-  function __construct($name, $lastname, $age, $mother, $father)
+  function __construct($name, $lastname, $age, $mother=null, $father=null)
   {
     $this->name = $name;
     $this->lastname = $lastname;
